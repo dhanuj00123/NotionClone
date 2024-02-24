@@ -1,0 +1,70 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  directUrl = env("DIRECT_DATABASE_URL")
+}
+
+// Define the User model
+model User { 
+id        Int      @id @default(autoincrement())
+username  String   @unique
+email     String   @unique
+password  String
+createdAt DateTime @default(now())
+updatedAt DateTime @updatedAt
+// Define a one-to-many relationship with notes
+notes     Note[]
+// Define a one-to-many relationship with mind maps
+mindMaps  MindMap[]
+// Define a one-to-many relationship with calendar events
+calendarEvents CalendarEvent[]
+}
+
+// Define the Note model
+model Note {
+id        Int      @id @default(autoincrement())
+title     String
+content   String
+createdAt DateTime @default(now())
+updatedAt DateTime @updatedAt
+// Define a many-to-one relationship with User
+user      User     @relation(fields: [userId], references: [id])
+userId    Int
+}
+
+// Define the MindMap model
+model MindMap {
+id        Int      @id @default(autoincrement())
+title     String
+// Add any other necessary fields for mind maps
+createdAt DateTime @default(now())
+updatedAt DateTime @updatedAt
+// Define a many-to-one relationship with User
+user      User     @relation(fields: [userId], references: [id])
+userId    Int
+}
+
+// Define the CalendarEvent model
+model CalendarEvent {
+id        Int      @id @default(autoincrement())
+title     String
+startDate DateTime
+endDate   DateTime
+location  String?
+// Add any other necessary fields for calendar events
+createdAt DateTime @default(now())
+updatedAt DateTime @updatedAt
+// Define a many-to-one relationship with User
+user      User     @relation(fields: [userId], references: [id])
+userId    Int
+}	
