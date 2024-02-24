@@ -37,7 +37,7 @@
             
             ## MVP Ideas
             
-            > [Story: Develop a mind-mapping feature](Story%20Develop%20a%20mind-mapping%20feature%200bd448f835884b0fb3cc164d83e24f54.md)
+            > [Story: Develop a mind-mapping feature]
             > 
             > 
             > This involves creating an interactive interface where users can visually organize their information and ideas.
@@ -51,7 +51,7 @@
             
             ---
             
-            > [Story: Implement a built-in calendar](Story%20Implement%20a%20built-in%20calendar%20ce55d52ff5c64e2f8a2ec414f50180bd.md)
+            > [Story: Implement a built-in calendar]
             > 
             > 
             > This involves developing a calendar feature that allows users to schedule and set reminders for their tasks.
@@ -67,7 +67,7 @@
             
             ## Post-MVP Ideas
             
-            > [Story: Develop time tracking and productivity monitoring functionalities](Story%20Develop%20time%20tracking%20and%20productivity%20monit%20dd4fb07c401a41d7bacfc508b2893090.md)
+            > [Story: Develop time tracking and productivity monitoring functionalities]
             > 
             > 
             > This story focuses on creating features that enable users to track their time spent on tasks and monitor their productivity.
@@ -81,7 +81,7 @@
             
             ---
             
-            > [Story: Improve mobile app functionality](Story%20Improve%20mobile%20app%20functionality%20474bd2da0cda4523a9fd41cbcc97f860.md)
+            > [Story: Improve mobile app functionality]
             > 
             > 
             > This story involves enhancing the mobile app's usability and functionality.
