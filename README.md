@@ -1,4 +1,5 @@
-# NOTION CLONE
+# NOTION CLONE 
+[Notion Link for more info](https://www.notion.so/NOTION-CLONE-e0558fa7ea384e1a9a53b71077bcde00?pvs=4)
 
 - A Notion clone with an integrated mind-mapping tool for visual note-taking 🧠
 - A Notion clone featuring built-in time tracking and productivity monitoring functionalities ⏲️
