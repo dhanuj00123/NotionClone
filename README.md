@@ -1,5 +1,7 @@
 # NOTION CLONE 
-[VD](https://www.figma.com/file/iMIFAz4GNHY7emBHifhZjD/Untitled?type=design&node-id=0%3A1&mode=design&t=cQgg6erKfM2MbE0k-1)
+## VD
+[FIGMA VD](https://www.figma.com/file/iMIFAz4GNHY7emBHifhZjD/Untitled?type=design&node-id=0%3A1&mode=design&t=cQgg6erKfM2MbE0k-1)
+## DOCS
 [Notion Link for more info](https://www.notion.so/NOTION-CLONE-e0558fa7ea384e1a9a53b71077bcde00?pvs=4)
 
 - A Notion clone with an integrated mind-mapping tool for visual note-taking 🧠
