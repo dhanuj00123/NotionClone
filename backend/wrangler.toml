@@ -1,15 +1,16 @@
 name = "backend"
 main = "src/index.ts"
 compatibility_date = "2024-02-22"
+[vars]
+ DATABASE_URL="prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiODI2NDk4NGQtMjhmNy00MGQ3LWIxMDItN2QyYzc1MWUwMzM1IiwidGVuYW50X2lkIjoiZTU3ZmUxMDNkOTQ4NmZhMzFjYjFjOTc2NGI0ZjAzZDIyYzBjMTA3ZjZhMmM0NGI0YzIxNjdkNzhmMmIxYWY5MCIsImludGVybmFsX3NlY3JldCI6ImI5YmQzZWRkLTdkNTYtNGJhNi1iY2VhLTMyNTQzMmMzY2U0MyJ9.IAeEdZkF7Ts6WQCnpZMAVOvYeZ1yRCEt9WPR1iYgc4Y"
+ JWT_SECRET="thisisjwtsecret"
 
 # Variable bindings. These are arbitrary, plaintext strings (similar to environment variables)
 # Note: Use secrets to store sensitive data.
 # Docs: https://developers.cloudflare.com/workers/platform/environment-variables
 # [vars]
 # MY_VARIABLE = "production_value"
-# [vars]
-# DATABASE_URL = "prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiZWEyYzBhOGItOGQ3Ni00MTY5LWIwYjQtZThlZTdkZDlhNzYyIiwidGVuYW50X2lkIjoiZTU3ZmUxMDNkOTQ4NmZhMzFjYjFjOTc2NGI0ZjAzZDIyYzBjMTA3ZjZhMmM0NGI0YzIxNjdkNzhmMmIxYWY5MCIsImludGVybmFsX3NlY3JldCI6ImI5YmQzZWRkLTdkNTYtNGJhNi1iY2VhLTMyNTQzMmMzY2U0MyJ9.geDSQxZgAWUpo0PKiD6RgjGuh8nxek0oyIf2CEF1OaY"
-
+#
 # Bind a KV Namespace. Use KV as persistent storage for small key-value pairs.
 # Docs: https://developers.cloudflare.com/workers/runtime-apis/kv
 # [[kv_namespaces]]

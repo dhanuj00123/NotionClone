@@ -1,40 +1,24 @@
-import { Context, Env, Hono } from 'hono';
-import { Prisma, PrismaClient } from '@prisma/client/edge';
-import { withAccelerate } from '@prisma/extension-accelerate';
-
-const app = new Hono<Enviroment>();
-
-type Enviroment = {
+import { Hono } from 'hono';
+import auth from './auth';
+import user from './user';
+import notes from './notes';
+const app = new Hono<{
 	Bindings: {
 		DATABASE_URL: string;
+		DIRECT_URL: string;
+		JWT_SECRET: string;
 	};
 	Variables: {
-		prisma: PrismaClient;
+		userId: string;
 	};
-};
+}>();
 
-app.use('*', async (c, next) => {
-	const prisma = new PrismaClient({
-		datasources: {
-			db: {
-				url: String(c.env.DATABASE_URL),
-			},
-		},
-	}).$extends(withAccelerate());
-	// c.set('prisma', prisma);
-	await next();
-});
+// Routes
+app.route('/v1/auth', auth);
+app.route('/v1/user', user);
+app.route('/v1/notes', notes);
 
 app.get('/', async (c) => {
-	// const count = c.get('prisma').user.count();
-	return c.text('hi');
+	return c.json({ message: 'app is healthy ' });
 });
-
-// app.post('/post', async (c) => {
-// 	// DOUBT do i need to write the below this everytime?
-// 	const { DIRECT_URL } = env<{ DIRECT_URL: string }>(c);
-// 	const prisma = new PrismaClient({
-// 		datasourceUrl: DIRECT_URL,
-// 	}).$extends(withAccelerate());
-// });
 export default app;
